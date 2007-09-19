@@ -3,10 +3,10 @@
 
 Name        	: glibc_lsb
 Version     	: 2.4.7
-Release     	: %mkrel 1
+Release     	: %mkrel 2
 Group       	: System/Libraries
 Summary     	: LSB dynamic loader links
-License   	: LGPL
+License   	: Freely redistributable without restriction
 URL         	: http://www.linuxbase.org/spec
 
 BuildRoot   	: %{_tmppath}/%{name}-%{version}-root
@@ -54,5 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 /%{_lib}/ld-lsb-x86-64.so.%{ld_ver}
 /%{_lib}/ld-lsb-x86-64.so.%{compat_ld_ver}
 %endif
-
 
