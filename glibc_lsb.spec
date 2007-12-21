@@ -9,6 +9,7 @@ Summary     	: LSB dynamic loader links
 License   	: Freely redistributable without restriction
 URL         	: http://www.linuxbase.org/spec
 
+BuildRoot   	: %{_tmppath}/%{name}-%{version}-root
 Requires	: lsb-core >= 3.1
 
 %description
