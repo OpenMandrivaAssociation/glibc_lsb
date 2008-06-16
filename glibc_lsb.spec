@@ -3,7 +3,7 @@
 
 Name        	: glibc_lsb
 Version     	: 2.4.7
-Release     	: %mkrel 3
+Release     	: %mkrel 4
 Group       	: System/Libraries
 Summary     	: LSB dynamic loader links
 License   	: Freely redistributable without restriction
