@@ -28,7 +28,6 @@ Provides ld-lsb* dynamic loader links for LSB compliance
 %build
 
 %install
-rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/%{_lib}
 %ifarch %{ix86}
 ln -sf ld-linux.so.2 $RPM_BUILD_ROOT/%{_lib}/ld-lsb.so.%{ld_ver}
@@ -45,11 +44,7 @@ ln -sf ld-linux-x86-64.so.2 $RPM_BUILD_ROOT/%{_lib}/ld-lsb-x86-64.so.%{compat_ld
 
 export DONT_SYMLINK_LIBS=1
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files -n %{libname}
-%defattr(-, root, root)
 %ifarch %{ix86}
 /%{_lib}/ld-lsb.so.%{ld_ver}
 /%{_lib}/ld-lsb.so.%{compat_ld_ver}
@@ -62,4 +57,3 @@ rm -rf $RPM_BUILD_ROOT
 /%{_lib}/ld-lsb-x86-64.so.%{ld_ver}
 /%{_lib}/ld-lsb-x86-64.so.%{compat_ld_ver}
 %endif
-
