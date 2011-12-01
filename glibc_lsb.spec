@@ -28,18 +28,18 @@ Provides ld-lsb* dynamic loader links for LSB compliance
 %build
 
 %install
-install -d $RPM_BUILD_ROOT/%{_lib}
+install -d %{buildroot}/%{_lib}
 %ifarch %{ix86}
-ln -sf ld-linux.so.2 $RPM_BUILD_ROOT/%{_lib}/ld-lsb.so.%{ld_ver}
-ln -sf ld-linux.so.2 $RPM_BUILD_ROOT/%{_lib}/ld-lsb.so.%{compat_ld_ver}
+ln -sf ld-linux.so.2 %{buildroot}/%{_lib}/ld-lsb.so.%{ld_ver}
+ln -sf ld-linux.so.2 %{buildroot}/%{_lib}/ld-lsb.so.%{compat_ld_ver}
 %endif
 %ifarch ppc
-ln -sf ld-2.4.so $RPM_BUILD_ROOT/%{_lib}/ld-lsb-ppc32.so.%{ld_ver}
-ln -sf ld-2.4.so $RPM_BUILD_ROOT/%{_lib}/ld-lsb-ppc32.so.%{compat_ld_ver}
+ln -sf ld-2.4.so %{buildroot}/%{_lib}/ld-lsb-ppc32.so.%{ld_ver}
+ln -sf ld-2.4.so %{buildroot}/%{_lib}/ld-lsb-ppc32.so.%{compat_ld_ver}
 %endif
 %ifarch x86_64
-ln -sf ld-linux-x86-64.so.2 $RPM_BUILD_ROOT/%{_lib}/ld-lsb-x86-64.so.%{ld_ver}
-ln -sf ld-linux-x86-64.so.2 $RPM_BUILD_ROOT/%{_lib}/ld-lsb-x86-64.so.%{compat_ld_ver}
+ln -sf ld-linux-x86-64.so.2 %{buildroot}/%{_lib}/ld-lsb-x86-64.so.%{ld_ver}
+ln -sf ld-linux-x86-64.so.2 %{buildroot}/%{_lib}/ld-lsb-x86-64.so.%{compat_ld_ver}
 %endif
 
 export DONT_SYMLINK_LIBS=1
