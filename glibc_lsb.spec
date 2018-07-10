@@ -4,7 +4,7 @@
 
 Name:		glibc_lsb
 Version:	2.4.7
-Release:	15
+Release:	16
 Group:		System/Libraries
 Summary:	LSB dynamic loader links
 License:	Freely redistributable without restriction
