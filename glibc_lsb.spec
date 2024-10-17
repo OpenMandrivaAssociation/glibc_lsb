@@ -8,7 +8,7 @@ Release:	18
 Group:		System/Libraries
 Summary:	LSB dynamic loader links
 License:	Freely redistributable without restriction
-URL:		http://www.linuxbase.org/spec
+URL:		https://www.linuxbase.org/spec
 
 Requires:	lsb-core >= 3.1
 
